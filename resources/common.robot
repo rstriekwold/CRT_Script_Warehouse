@@ -5,8 +5,8 @@ Library                   String
 
 
 *** Variables ***
-${username}               YOUR USERNAME HERE
-${login_url}              https://YOURDOMAIN.my.salesforce.com          # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${username}               rstriekwold@copado.com.crttestprod.roberttrai
+${login_url}              https://copadoprofessionalservices-crt--roberttrai.sandbox.lightning.force.com/         # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}               ${login_url}/lightning/page/home
 
 
