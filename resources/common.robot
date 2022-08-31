@@ -12,7 +12,7 @@ ${home_url}               ${login_url}/lightning/page/home
 
 *** Keywords ***
 Setup Browser
-    Open Browser          about:blank                 ${BROWSER}
+    Open Browser          about:blank                 Chrome
     SetConfig             LineBreak                   ${EMPTY}               #\ue000
     SetConfig             DefaultTimeout              20s                    #sometimes salesforce is slow
 
