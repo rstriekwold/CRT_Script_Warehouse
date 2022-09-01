@@ -74,6 +74,16 @@ DeleteLeads
     VerifyNoText          Undo
     ClickText             Leads                    partial_match=False
 
+
 Start webshop
     [Documentation]       Start the qentinel webshop
     GoTo                  ${web_shop}
+
+ Create order
+    Run Keyword         Start webshop
+    ClickText           Sacha the Deer
+    VerifyText          Slim Fit, 5oz 100% Cotton T-Shirt.
+    ClickText           Add to cart
+    VerifyText          Cart summary
+    VerifyText          Sacha the Deer
+    ClickText           Continue shopping
