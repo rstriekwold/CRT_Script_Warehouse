@@ -8,6 +8,7 @@ Library                   String
 ${username}               rstriekwold@copado.com.crttestprod.roberttrai
 ${login_url}              https://copadoprofessionalservices-crt--roberttrai.sandbox.lightning.force.com/         # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}               ${login_url}/lightning/page/home
+${web_shop}               https://qentinelqi.github.io/shop/ 
 
 
 *** Keywords ***
@@ -72,3 +73,7 @@ DeleteLeads
     VerifyText            Undo
     VerifyNoText          Undo
     ClickText             Leads                    partial_match=False
+
+Start webshop
+    [Documentation]       Start the qentinel webshop
+    GoTo                  ${web_shop}
