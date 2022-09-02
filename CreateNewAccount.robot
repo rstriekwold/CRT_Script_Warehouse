@@ -9,14 +9,14 @@ Suite Teardown                End suite
 Create order in webshop
     [Documentation]     Select a product, verify details on the page,
     ...                 add the product to the cart and continue shopping.
-    # Appstate            Start webshop
-    Appstate            Create order
-    # ClickText           Sacha the Deer
-    # VerifyText          Slim Fit, 5oz 100% Cotton T-Shirt.
-    # ClickText           Add to cart
-    # VerifyText          Cart summary
-    # VerifyText          Sacha the Deer
-    # ClickText           Continue shopping
+    Appstate            Start webshop
+    # Appstate            Create order
+    ClickText           Sacha the Deer
+    VerifyText          Slim Fit, 5oz 100% Cotton T-Shirt.
+    ClickText           Add to cart
+    VerifyText          Cart summary
+    VerifyText          Sacha the Deer
+    ClickText           Continue shopping
 
 Create Account Growmore
     [Tags]                        Account                  Create A New Account
@@ -26,8 +26,7 @@ Create Account Growmore
     ClickText                     New
     UseModal                      On
     Sleep                         1 sec
-    # Wait Until Keyword Succeeds   1 min   5 sec   
-    TypeText   Account Name    Growmore
+    TypeText                      Account Name    Growmore
     PickList                      Type            Competitor
     ClickText                     Website
     TypeText                      Website         www.growmore.org
