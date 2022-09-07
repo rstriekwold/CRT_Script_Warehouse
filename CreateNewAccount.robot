@@ -28,6 +28,9 @@ Create order in webshop and add same product again
     ClickText         Add to cart
     VerifyText        Cart summary
     VerifyElementText     //span[@class\="snipcart__font--secondary snipcart__font--regular"]   2
+    ClickItem         Remove item
+    VerifyText        Your cart is empty
+
 
 Create Account Growmore
     [Tags]                        Account                  Create A New Account
