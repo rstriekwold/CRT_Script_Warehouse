@@ -77,6 +77,7 @@ DeleteLeads
 
 Start webshop
     [Documentation]       Start the qentinel webshop
+    DeleteAllCookies
     GoTo                  ${web_shop}
 
 
