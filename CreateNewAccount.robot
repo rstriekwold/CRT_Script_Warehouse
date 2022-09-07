@@ -17,9 +17,17 @@ Create order in webshop
     ClickText         Add to cart
     ${pricepdp} =        Convert To String     ${price}
     VerifyText        Cart summary
-    VerifyText        Convert To String ${pricepdp}                     anchor=Total
+    VerifyText        ${pricepdp}                     anchor=Total
     VerifyText        Sacha the Deer
     ClickText         Continue shopping
+
+Create order in webshop and add same product again
+    [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
+    Appstate          Create order
+    VerifyText        Slim Fit, 5oz 100% Cotton T-Shirt.
+    ClickText         Add to cart
+    VerifyText        Cart summary
+    VerifyElementText     //span[@class\="snipcart__font--secondary snipcart__font--regular"]   2
 
 Create Account Growmore
     [Tags]                        Account                  Create A New Account
