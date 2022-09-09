@@ -35,7 +35,7 @@ Create order in webshop and add same product again
 
 Create Account Growmore
     # [Tags]                        Account      Create A New Account     testgen       linear
-    [tags]                        testgen    linear    numtests=2    growmore
+    [Tags]                        testgen    linear    numtests=2    growmore
     Appstate                      Home
     LaunchApp                     Sales
     ClickText                     Accounts
