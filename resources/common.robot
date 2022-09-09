@@ -40,6 +40,7 @@ Home
 
 Sales App
     [Documentation]        Navigate to the Sales App
+    Run Keyword            Home
     LaunchApp              Sales
 
 # Example of custom keyword with robot fw syntax
