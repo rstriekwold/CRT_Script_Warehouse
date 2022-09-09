@@ -8,6 +8,11 @@ Suite Teardown                End suite
 ${accountName}
 
 *** Test Cases ***
+Verify text 
+    [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
+    [Tags]            testgen                        linear    numtests=2 blaat
+    Appstate          Start webshop
+    VerifyText        [spirit, animal]
 
 Create order in webshop
     [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
