@@ -1,10 +1,11 @@
 *** Settings ***
-
 Library    QWeb
 Resource                      ./resources/common.robot
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 
+*** Variables ***
+${accountName}
 
 *** Test Cases ***
 
@@ -33,13 +34,17 @@ Create order in webshop and add same product again
 
 
 Create Account Growmore
-    [Tags]                        Account                  Create A New Account
+    # [Tags]                        Account      Create A New Account     testgen       linear
+    [tags]                        testgen    linear    numtests=2
+    Appstate                      Home
     LaunchApp                     Sales
     ClickText                     Accounts
     ClickText                     New
     UseModal                      On
-    Sleep                         1 sec
-    Wait Until Keyword Succeeds   1 min   5 sec   TypeText   Account Name    Growmore
+    VerifyText                    Save              timeout=4   
+    # ${accountName}=             Convert To String                         [Growmore,Growless]
+    # Wait Until Keyword Succeeds   1 min   5 sec             
+    TypeText                      Account Name      [Growmore, Growless]
     PickList                      Type            Competitor
     ClickText                     Website
     TypeText                      Website         www.growmore.org
@@ -50,15 +55,14 @@ Create Account Growmore
     TypeText                      Employees       100
     ClickText                     Save            partial_match=false
     UseModal                      Off
-
-    ClickText                 Details                    anchor=Related
-    VerifyText               Growmore
-    VerifyText               Growmore                    anchor=Account Name
-    VerifyField               Phone                       (123) 456-7890
-    VerifyField               Employees                   100
-    VerifyField               Website                     www.growmore.org
-    VerifyField               Industry                    Banking
-    ClickText                 Delete
-    UseModal                  On
-    ClickText                 Delete
-    UseModal                  Off
+    ClickText                     Details                    anchor=Related
+    VerifyText                    Growmore
+    VerifyText                    Growmore                    anchor=Account Name
+    VerifyField                   Phone                       (123) 456-7890
+    VerifyField                   Employees                   100
+    VerifyField                   Website                     www.growmore.org
+    VerifyField                   Industry                    Banking
+    ClickText                     Delete
+    UseModal                      On
+    ClickText                     Delete
+    UseModal                      Off
