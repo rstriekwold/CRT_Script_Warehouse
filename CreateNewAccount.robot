@@ -33,7 +33,7 @@ ${accountName}
 #     VerifyText        Your cart is empty
 
 
-Create Account Growmore
+Create Account Growmore and delete
     # [Tags]                        Account      Create A New Account     testgen       linear
     [Tags]                        testgen    linear    numtests=2    growmore
     Appstate                      Home
