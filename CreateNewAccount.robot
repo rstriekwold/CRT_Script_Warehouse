@@ -8,34 +8,29 @@ Suite Teardown                End suite
 ${accountName}
 
 *** Test Cases ***
-Verify text 
-    [Documentation]    Verify text
-    [Tags]            testgen                        linear    numtests=2    blaat
-    Appstate          Start webshop
-    VerifyText        [spirit, animal]
 
-Create order in webshop
-    [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
-    Appstate          Start webshop
-    ClickText         Sacha the Deer
-    VerifyText        Slim Fit, 5oz 100% Cotton T-Shirt.
-    ${price}       GetText           //div/h4    
-    ClickText         Add to cart
-    ${pricepdp} =        Convert To String     ${price}
-    VerifyText        Cart summary
-    VerifyText        ${pricepdp}                     anchor=Total
-    VerifyText        Sacha the Deer
-    ClickText         Continue shopping
+# Create order in webshop
+#     [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
+#     Appstate          Start webshop
+#     ClickText         Sacha the Deer
+#     VerifyText        Slim Fit, 5oz 100% Cotton T-Shirt.
+#     ${price}       GetText           //div/h4    
+#     ClickText         Add to cart
+#     ${pricepdp} =        Convert To String     ${price}
+#     VerifyText        Cart summary
+#     VerifyText        ${pricepdp}                     anchor=Total
+#     VerifyText        Sacha the Deer
+#     ClickText         Continue shopping
 
-Create order in webshop and add same product again
-    [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
-    Appstate          Create order
-    VerifyText        Slim Fit, 5oz 100% Cotton T-Shirt.
-    ClickText         Add to cart
-    VerifyText        Cart summary
-    VerifyElementText     //span[@class\="snipcart__font--secondary snipcart__font--regular"]   2
-    ClickItem         Remove item
-    VerifyText        Your cart is empty
+# Create order in webshop and add same product again
+#     [Documentation]   Select a product, verify details on the page,     add the product to the cart and continue shopping.
+#     Appstate          Create order
+#     VerifyText        Slim Fit, 5oz 100% Cotton T-Shirt.
+#     ClickText         Add to cart
+#     VerifyText        Cart summary
+#     VerifyElementText     //span[@class\="snipcart__font--secondary snipcart__font--regular"]   2
+#     ClickItem         Remove item
+#     VerifyText        Your cart is empty
 
 
 Create Account Growmore
