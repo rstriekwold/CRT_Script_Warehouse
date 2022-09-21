@@ -27,3 +27,7 @@ test2
 test3
     [Documentation]   Test Case created using the QEditor
     Home
+
+test4
+    [Documentation]    Test Case created using the QEditor
+
