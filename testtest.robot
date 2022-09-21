@@ -4,9 +4,6 @@
 
 *** Settings ***
 
-Resource    Broken.robot
-
-
 Library    QForce
 
 Resource    ./resources/common.robot
