@@ -12,4 +12,5 @@ Library    QWeb
 
 test
     [Documentation]   Test Case created using the QEditor
+    OpenBrowser       about:blank       chrome
     Home
