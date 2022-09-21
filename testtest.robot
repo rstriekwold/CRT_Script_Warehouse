@@ -4,7 +4,7 @@
 
 *** Settings ***
 
-Resource    Broken.robot
+Resource    ./resources/common.robot
 
 Library    QWeb
 
