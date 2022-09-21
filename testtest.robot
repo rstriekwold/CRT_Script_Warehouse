@@ -4,6 +4,7 @@
 
 *** Settings ***
 
+
 Library    QForce
 
 Resource    ./resources/common.robot
@@ -18,3 +19,11 @@ test
     Home
     LaunchApp         Sales
     VerifyText        Quarterly Performance
+
+test2
+    [Documentation]   Test Case created using the QEditor
+    Home
+
+test3
+    [Documentation]   Test Case created using the QEditor
+    Home
