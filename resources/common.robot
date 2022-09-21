@@ -12,6 +12,13 @@ ${web_shop}               https://qentinelqi.github.io/shop/
 
 
 *** Keywords ***
+Home
+    [Documentation]       Navigate to homepage, login if needed
+    GoTo                  ${home_url}
+    ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.    2
+    Run Keyword If        ${login_status}             Login
+    ClickText             Home
+    VerifyTitle           Home | Salesforce
 Setup Browser
     Open Browser          about:blank                 Chrome
     SetConfig             LineBreak                   ${EMPTY}               #\ue000
@@ -30,13 +37,6 @@ Login
     ClickText             Log In
 
 
-Home
-    [Documentation]       Navigate to homepage, login if needed
-    GoTo                  ${home_url}
-    ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.    2
-    Run Keyword If        ${login_status}             Login
-    ClickText             Home
-    VerifyTitle           Home | Salesforce
 
 Sales App
     [Documentation]        Navigate to the Sales App
