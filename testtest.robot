@@ -4,6 +4,8 @@
 
 *** Settings ***
 
+Resource    Broken.robot
+
 
 Library    QForce
 
@@ -29,5 +31,5 @@ test3
     Home
 
 test4
-    [Documentation]    Test Case created using the QEditor
-
+    [Documentation]   Test Case created using the QEditor
+    Home
