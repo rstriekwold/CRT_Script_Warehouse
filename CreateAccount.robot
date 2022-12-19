@@ -10,6 +10,12 @@ Entering A Lead
     Appstate                  Home
     LaunchApp                 Sales
 
+
+
+
+    VerifyField    Phone                       +12258443456789    partial_match=True
+    VerifyField    Phone                        +12258443456789        
+
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
     ClickText                 New                        anchor=Import
