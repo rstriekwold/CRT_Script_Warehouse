@@ -12,7 +12,7 @@ ${fullName}
 
 *** Test Cases ***
 Entering A Lead
-    [tags]                    Linear Generation Robert    Lead    testgen    linear    numtests=3    
+    [tags]                    Lead    testgen    linear    numtests=3    
     Appstate                  Home
     LaunchApp                 Sales
 
