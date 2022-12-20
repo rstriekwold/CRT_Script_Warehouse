@@ -33,7 +33,8 @@ Entering A Lead
     TypeText                  Phone                       +12234567858449             First Name
     TypeText                  Company                     Growmore                    Last Name
     TypeText                  Title                       Manager                     Address Information
-    TypeText                  Email                       VALID_EMAIL_ADDRESS         Rating
+    # TypeText                  Email                       VALID_EMAIL_ADDRESS         Rating
+    TypeText                  Email                       test@test.nl         Rating
     TypeText                  Website                     https://www.growmore.com/
 
     Picklist                  Lead Source                 Partner
