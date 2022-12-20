@@ -12,10 +12,9 @@ ${fullName}
 
 *** Test Cases ***
 Entering A Lead
-    [tags]                    Lead    testgen    nwise=3
+    [tags]                    Lead    testgen    nwise=2
     Appstate                  Home
     LaunchApp                 Sales
-
     ClickText                 Leads
     ClickText                 New                         anchor=Import            timeout=120s
     VerifyText                Lead Information
