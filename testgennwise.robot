@@ -12,7 +12,7 @@ ${fullName}
 
 *** Test Cases ***
 Entering A Lead
-    [tags]                    Lead    testgen    nwise=2    numtests=9
+    [tags]                    Lead    testgen    nwise=2    numtests=3
     Appstate                  Home
     LaunchApp                 Sales
 
@@ -22,8 +22,8 @@ Entering A Lead
     UseModal                  On                          # Only find fields from open modal dialog
 
     ${Salutation}=            Convert To String           [Ms.,Mrs.,Mr.]
-    ${firstName}=             Convert To String           ${firstName}
-    ${lastName}=              Convert To String           ${lastName}
+    ${firstName}=             Convert To String           [${firstName}]
+    ${lastName}=              Convert To String           [${lastName}]
     ${fullTitle}=             Catenate                    ${Salutation}               ${firstName}    ${lastName}
     ${fullName}=              Catenate                    ${firstName}                ${lastName}
 
