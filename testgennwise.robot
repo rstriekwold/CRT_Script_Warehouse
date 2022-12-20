@@ -12,7 +12,7 @@ ${fullName}
 
 *** Test Cases ***
 Entering A Lead
-    [tags]                    Lead    testgen    nwise=2    numtest=9
+    [tags]                    Lead    testgen    nwise=2    #numtest=9
     Appstate                  Home
     LaunchApp                 Sales
     ClickText                 Leads
