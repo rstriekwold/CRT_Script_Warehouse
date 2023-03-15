@@ -4,7 +4,7 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 
 *** Variables ***
-${Salutation}
+@{names}    Ms.,Mrs.,Mr.
 ${firstName}
 ${lastName}
 ${fullTitle}
@@ -22,7 +22,7 @@ Entering A Lead
     VerifyText                Lead Information
     UseModal                  On                          # Only find fields from open modal dialog
 
-    ${Salutation}=            Convert To String           [Ms.,Mrs.,Mr.]
+    ${Salutation}=            Convert To String           @{names} 
     ${firstName}=             Convert To String           [Tina,Jessica,John]
     ${lastName}=              Convert To String           [Smith,Thomas,Theodore]
     ${fullTitle}=             Catenate                    ${Salutation}               ${firstName}    ${lastName}
